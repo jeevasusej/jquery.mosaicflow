@@ -227,7 +227,7 @@
 					inlineImages.each(function() {
 						var image = $(this);
 						var imageSizes = getImageSizes(image);
-						var actualHeight = (image.width() * imageSizes.height) / imageSizes.width;
+						var actualHeight = (image.width() * (imageSizes.height||1)) / (imageSizes.width||1);
 
 						height += actualHeight;
 					});
